@@ -1,26 +1,73 @@
-# onlyyuuka — HPご提案用モックアップ
+# onlyyuuka — ホームページのデザイン3案
 
-- HP: https://yuearmy.github.io/mock-up/
-- 構成・必要なもの: https://yuearmy.github.io/mock-up/proposal.html
+リメイクアーティスト onlyyuuka の作品・作り手を紹介する、クライアント提案用サイトです。
 
-帯・古着のリメイク作品と作家を紹介し、販売先につなぐ1ページのHP案です。構成整理ページにはコンテンツ候補、必要素材、確認事項、担当、公開の完了条件を掲載しています。
+## 提出先
+
+**[3案を見比べる](https://yuearmy.github.io/mock-up/designs/)**
+
+| 案 | コンセプト | 主役 | ページ |
+|---|---|---|---|
+| 01 | 布の小さなギャラリー | 作品の質感と余白 | [開く](https://yuearmy.github.io/mock-up/designs/gallery/) |
+| 02 | 作り手のアトリエ | 手元・制作の視点・親しみ | [開く](https://yuearmy.github.io/mock-up/designs/atelier/) |
+| 03 | 布をめぐる編集誌 | 素材から作品への変化 | [開く](https://yuearmy.github.io/mock-up/designs/journal/) |
+
+各案は Home / About / Works / Contact の4ページ。色だけでなく、トップの情報順とレイアウトを変えています。
+
+**[HPに載せる内容と準備するもの](https://yuearmy.github.io/mock-up/designs/preparation.html)** に、掲載内容、写真の種類・枚数、原稿、確認担当、問い合わせ・ニュースレター・更新の運用を整理しています。
+
+## 提案書
+
+**[PDFで読む（7ページ）](https://yuearmy.github.io/mock-up/designs/downloads/onlyyuuka-website-proposal.pdf)** · **[編集用Word](https://yuearmy.github.io/mock-up/designs/downloads/onlyyuuka-website-proposal.docx)**
+
+3案の狙いと向いている目的、掲載コンテンツ、必要な写真・原稿、確認担当、公開までに決める事項を1冊に整理しました。WordからPDFへ変換し、全ページの文字・画像・表を確認済みです。
+
+## 動くところ
+
+- PC・タブレット・スマホに合わせたレイアウト、モバイルメニュー
+- 作品カテゴリの切り替え、作品詳細ダイアログ、Escapeで閉じる操作
+- 作品名を引き継ぐお問い合わせ
+- 必須・メール形式・空白のみの検証、入力内容の確認と修正
+- ニュースレターの入力確認、FAQ、提案資料の印刷
+
+**提案用の画面サンプルです。問い合わせの送信・メルマガ登録・保存・購入・決済は行いません。**
+
+## 素材について
+
+- 作品画像は既存の資料画像を使用。実物の高解像度版と、寸法・制作年・受付状況は正式公開前に確認します。
+- A案の布の展示画像はAI生成したイメージ写真です。
+- 手元・机上写真は既存リポジトリのイメージ素材で、本人や実際のアトリエと確認できていません。
+- 未確認の経歴・実績・費用・納期・SNS URLは追加していません。
+- 画像はローカルWebPで配信。外部フォント・外部画像・トラッカーに依存しません。
+- noindexは検索抑制のための設定で、アクセス制限ではありません。
 
 ## ローカル確認
 
-    python3 -m http.server 4188 --bind 127.0.0.1 --directory site
+    python3 -m http.server 4197 --bind 127.0.0.1 --directory site
 
-http://127.0.0.1:4188/ を開きます。依存パッケージ不要。site/index.html を直接ブラウザで開くこともできます。
+[ローカル比較ページ](http://127.0.0.1:4197/designs/) を開きます。依存パッケージ不要。HTMLを直接開くこともできます。
+
+## 構成
+
+- `site/designs/` — 今回の3案、比較、準備リスト、Word/PDF提案書
+- `scripts/build-designs.py` — 各案の4ページを生成するテンプレート
+- `scripts/check-design-files.py` — 相対リンク・画像・アンカーの静的確認
+- `scripts/verify-designs.cjs` — 1案目完成時に実行したブラウザ検証（Playwrightが必要）
+- `scripts/build-proposal-docx.py` — 提案書の再生成（python-docx/Pillowが必要）
+- `scripts/export-design-pdfs.cjs` — Web版比較・準備リストの印刷（Playwrightが必要）
+- `verification/20260907-ui-review.md` — Computer Useによる確認結果
+- `plans/20260907-design-proposals-implementation.md` — 制作順序と確認記録
+- `site/` 直下 — 以前の提案を保持。トップの案内から今回の3案へ移動可能
+
+## 再生成とチェック
+
+    python3 scripts/build-designs.py gallery atelier journal
+    python3 scripts/check-design-files.py
+    node --check site/designs/shared.js
+    node --check site/designs/proposal.js
+
+Computer Useで320 / 390 / 768 / 1024 / 1440pxを確認しました。表示崩れの修正と操作結果は検証記録を参照してください。
 
 ## 公開
 
-mainへのsite/の変更でGitHub ActionsがGitHub Pagesへ自動デプロイします。配信するのはsite/だけです。ワークフローは公式の静的サイトテンプレートに基づいています。
-
-## サンプルの範囲
-
-- 作品カテゴリ、詳細表示、FAQ、スマホメニュー、問い合わせ文の下書き・コピーが動きます。
-- 注文・決済・問い合わせ送信は接続していません。問い合わせ入力は送信・永続保存されません。
-- 準備リストのチェックは保存しません。印刷機能でPDFに記録できます。
-- 価格・在庫・連絡先など未確認情報は確定値として掲載していません。
-- 使用画像は既存資料からのコピー。原本は240〜498px程度で、正式公開には高解像度版と掲載許可の確認が必要です。
-- 本人の紹介文、ブランド表記、販売条件は正式公開前に確認します。
-- noindexを設定していますが、公開URLには誰でもアクセスできます。
+mainへのsite/の変更で、既存GitHub ActionsがGitHub Pagesを更新します。配信対象はsite/のみです。契約・本番フォーム接続を伴う本サイトの公開は、別途クライアントと要件を確認します。

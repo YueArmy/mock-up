@@ -3,3 +3,12 @@
 .env
 .env.*
 node_modules/
+
+# Local delivery packages and visual QA renders
+output/
+verification/*.png
+verification/*.json
+verification/pdf-render/
+verification/pdf-final/
+# Original image copies; the site serves optimized WebP files
+site/designs/assets/*.png

@@ -1,0 +1,16 @@
+Generation date: 2026-09-07
+Asset: concept A / 布の小さなギャラリー
+Tool: built-in image_gen__imagegen (not CLI)
+Source: /Users/koneko/.codex/generated_images/01a07a9d-dbc8-7060-8c5b-2d4dd97b6b5b/exec-1d84f564-180f-49f5-b8cf-b5c9bb806e30.png
+Destination: /Users/koneko/Developer/clients/mock-up/site/designs/assets/gallery-textile.png
+Role: AI-generated mood photograph; not a real onlyyuuka work.
+Inspection: 1536x1024 landscape; restrained beige plaster and low wood platform, pale and taupe draped cloth, narrow deep sage textile. Soft directional light, clear weave, no text or props. Main drape fills center; central 4:5 crop preserves textile but crops platform ends. Frayed edges are visible and somewhat more present than the request for very little fraying. Suitable as abstract material mood image rather than a finished-artwork record.
+Prompt:
+Use case: photorealistic-natural
+Asset type: photographic mood image for the hero of a Japanese remake artist portfolio, concept "a small textile gallery"; photograph only, no web UI.
+Scene: a minimal Japanese contemporary craft gallery. A large warm pale plaster wall, neutral near #F7F2EA, and a low simple natural wood plinth.
+Subject: only two or three large reclaimed textile pieces with visibly different woven textures, off-white, muted beige and grayish brown, arranged in a sculptural drape across the low wood plinth. Include one small deep sage textile section. Subtle seams and a very small amount of frayed edges suggest careful remaking and handwork.
+Style: an exceptionally restrained architectural magazine editorial photograph, realistic material detail, sophisticated contemporary craft installation. Quiet, elegant, tactile, mature.
+Composition: landscape 3:2, photographed straight-on, generous negative space. Keep the complete strongest textile arrangement centered in the middle half so it can be cropped to portrait 4:5 as a website's right-side hero. Textile large shapes and authentic weave are the focus. The fabric should be arranged thoughtfully like an art object, rather than discarded laundry.
+Lighting: soft natural light from upper left, delicate shadows, no strong yellow cast, balanced neutral warmth.
+No flowers, dried flowers, pottery, people, lettering, logo, watermark, decorative patterns, busy props, or UI. This is a proposed mood image, not a photograph of an existing real artwork.

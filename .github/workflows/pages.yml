@@ -2,7 +2,7 @@ name: Deploy homepage mockup
 on:
   push:
     branches: [main]
-    paths: ['site/**', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/check-design-files.py', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +24,9 @@ jobs:
         run: |
           node --check site/app.js
           node --check site/proposal.js
+          node --check site/designs/shared.js
+          node --check site/designs/proposal.js
+          python3 scripts/check-design-files.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website only
