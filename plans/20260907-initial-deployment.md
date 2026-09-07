@@ -15,3 +15,12 @@ onlyyuukaのHP案と、HPに必要なコンテンツ・素材・確認事項を�
 
 ## ローカル検証
 1440px／390px幅で横はみ出しなし。作品フィルター3/2/1件、作品詳細、問い合わせ作品引継ぎ、下書き・コピー、FAQ、購入案内、モバイルメニューを確認。準備リストは18行のコンテンツ・素材表、担当と完了条件、印刷対応あり。モバイルの提案見出しの折り返しを調整。
+
+## 完了記録
+- 公開コミット: 631888e5b2e0dc56e8b8ec6eb51c91a381f50977
+- GitHub Actions: https://github.com/YueArmy/mock-up/actions/runs/34091332416 （success）
+- 公開URL: https://yuearmy.github.io/mock-up/
+- 公開整理ページ: https://yuearmy.github.io/mock-up/proposal.html
+- 配信12ファイルすべてHTTP 200、ローカルソースとのバイト一致を確認。
+- 公開ページで作品絞り込み・詳細表示・相対リンク・整理表18行を確認。
+- 元資料を公開リポジトリに追加せず、site/だけをPagesへ配信。
