@@ -53,7 +53,7 @@ def home():
     <section class="exhibition-concept wrap" id="concept"><div>
       <p class="eyebrow">REMAKE AS STORY — 01</p><h2>しまっていた布に、<br>新しい居場所を。</h2>
     </div><div><p>帯や古布を、もう一度使えるかたちへ。身にまとっていた帯が、食卓の一枚になる。小さな布のかけらが、お茶の時間を彩る。</p><p>もとの素材のよさを見つけ、今の暮らしで使うかたちを考えています。残したいのは、布の表情。</p><p class="d4-concept-note">布と、手と、そのつづき。</p></div></section>
-    <section class="selected-works wrap" id="works"><p class="eyebrow">SELECTED WORKS — 02</p><div class="section-heading"><h2>布から生まれたもの。</h2></div><div class="works-grid">{cards()}</div><div class="d4-all-works">{base.link('works.html', 'すべての作品を見る')}</div><p class="sample-note">既存資料の実作品写真です。寸法・制作年・受付状況は、正式掲載前に確認します。</p></section>
+    <section class="selected-works d4-gallery-selection wrap" id="works"><div class="section-heading"><div>{base.label('SELECTED WORKS','02')}<h2>布から生まれた、<br>三つのかたち。</h2></div>{base.link('works.html', 'すべての作品を見る')}</div><div class="works-grid">{base.cards()}</div><p class="sample-note">既存資料の実作品写真です。寸法・制作年・受付状況は、正式掲載前に確認します。</p></section>
     <section class="d4-artist wrap"><figure>{base.img('hands-process.webp', '布と針を使った手仕事のイメージ写真')}<figcaption>制作風景のイメージ / ご本人の手元ではありません。</figcaption></figure><div class="d4-artist-copy"><div><p class="eyebrow">THE HANDS BEHIND — 03</p><h2>布を見つめて、<br>次のかたちを考える。</h2></div><div><p>リメイクアーティスト、onlyyuuka。帯や古布の色、柄、織りを手がかりに、バッグや小物、インテリアの作品を制作しています。</p>{base.link('about.html', '作り手について')}</div></div></section>
     {base.contactband()}{base.newsletter()}'''
 
@@ -61,7 +61,7 @@ def home():
 def document(page, content):
     html = base.document('design04', page, content)
     html = html.replace('3つの案を見比べる', '4つの案を見比べる')
-    html = html.replace(base.contactband(), contactband()).replace(base.newsletter(), newsletter()).replace(base.footer(), footer()).replace(base.cards(), cards())
+    html = html.replace(base.contactband(), contactband()).replace(base.newsletter(), newsletter()).replace(base.footer(), footer())
     nav = ''.join(f'<a href="{href}" {"aria-current=page" if page==key else ""}>{label}</a>' for key, href, label in [('works','works.html','作品'),('about','about.html','作り手について'),('contact','contact.html','お問い合わせ')])
     html = re.sub(r'<nav id="navigation".*?</nav>', f'<nav id="navigation" aria-label="メインナビゲーション">{nav}<a href="#newsletter">お便り</a></nav>', html)
     html = html.replace('まだ、決まって<br>いなくても。','<span>まだ、決まって</span><wbr><span>いなくても。</span>')

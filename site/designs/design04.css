@@ -240,3 +240,29 @@
 .design04 .d4-collection>.sample-note{text-align:center;margin:clamp(32px,4vw,54px) 0 0;font-size:11.5px!important}
 .design04 .d4-work-faq h3{font-size:clamp(15px,1.3vw,18px)}
 @media(max-width:720px){.design04 .d4-collection .filters{gap:12px 18px}.design04 .d4-collection .filters button{font-size:11px}}
+
+/* Home selection: Design 1's staggered, uncropped artwork presentation. */
+.design04 .d4-gallery-selection .section-heading{border:0;padding:0;margin:0 0 45px;gap:40px}
+.design04 .d4-gallery-selection .section-heading h2{margin-top:20px;font-size:clamp(27px,3vw,42px);line-height:1.7;letter-spacing:.04em}
+.design04 .d4-gallery-selection .works-grid{gap:34px}
+.design04 .d4-gallery-selection .work:nth-child(2){margin-top:80px}
+.design04 .d4-gallery-selection .work:nth-child(3){margin-top:28px}
+.design04 .d4-gallery-selection .work figure{aspect-ratio:4/5;background:#e9e3da}
+.design04 .d4-gallery-selection .work img{height:100%;padding:28px;object-fit:contain}
+.design04 .d4-gallery-selection .work-view{border-radius:20px;padding:6px 13px;font-size:9px;background:var(--paper)}
+.design04 .d4-gallery-selection .work-meta{margin-top:21px;font-size:9px;letter-spacing:.03em}
+.design04 .d4-gallery-selection .work h3{font:19px/1.6 var(--serif);margin:9px 0 5px}
+.design04 .d4-gallery-selection .work p{font-size:11px}
+.design04 .d4-gallery-selection>.sample-note{text-align:left;margin-top:30px}
+@media(max-width:720px){
+ .design04 .d4-gallery-selection .section-heading{gap:20px;flex-wrap:wrap;margin-bottom:30px}
+ .design04 .d4-gallery-selection .section-heading h2{font-size:27px;margin-top:15px}
+ .design04 .d4-gallery-selection .section-heading .text-link{font-size:10px}
+ .design04 .d4-gallery-selection .works-grid{gap:35px}
+ .design04 .d4-gallery-selection .work:nth-child(n){margin-top:0}
+ .design04 .d4-gallery-selection .work figure{aspect-ratio:1.1}
+ .design04 .d4-gallery-selection .work img{padding:30px}
+ .design04 .d4-gallery-selection .work h3{font-size:21px}
+ .design04 .d4-gallery-selection .work-meta{margin-top:18px;font-size:10px}
+ .design04 .d4-gallery-selection .work p{font-size:12px}
+}
