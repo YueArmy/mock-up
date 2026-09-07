@@ -18,7 +18,7 @@
 
 ## 提案書
 
-**[PDFで読む（7ページ）](https://yuearmy.github.io/mock-up/designs/downloads/onlyyuuka-website-proposal.pdf)** · **[編集用Word](https://yuearmy.github.io/mock-up/designs/downloads/onlyyuuka-website-proposal.docx)**
+提案資料はClaude Design版へ移行中です。旧PDF・Wordは公開対象から削除しました。
 
 3案の狙いと向いている目的、掲載コンテンツ、必要な写真・原稿、確認担当、公開までに決める事項を1冊に整理しました。WordからPDFへ変換し、全ページの文字・画像・表を確認済みです。
 
@@ -49,7 +49,7 @@
 
 ## 構成
 
-- `site/designs/` — 今回の3案、比較、準備リスト、Word/PDF提案書
+- `site/designs/` — 今回の3案、比較、準備リスト
 - `scripts/build-designs.py` — 各案の4ページを生成するテンプレート
 - `scripts/check-design-files.py` — 相対リンク・画像・アンカーの静的確認
 - `scripts/verify-designs.cjs` — 1案目完成時に実行したブラウザ検証（Playwrightが必要）
