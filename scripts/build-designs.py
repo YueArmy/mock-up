@@ -2,7 +2,7 @@ from pathlib import Path
 import sys
 from html import escape
 ROOT=Path(__file__).resolve().parents[1]/'site'/'designs'
-CONCEPTS={'gallery':('01','布の小さなギャラリー','The Textile Gallery'),'atelier':('02','作り手のアトリエ','Inside the Atelier'),'journal':('03','布をめぐる編集誌','The Fabric Journal')}
+CONCEPTS={'atelier':('02','作り手のアトリエ','Inside the Atelier'),'journal':('03','布をめぐる編集誌','The Fabric Journal')}
 WORKS=[
  {'id':'runner','name':'帯のテーブルランナー','en':'A new place for obi.','file':'runner-detail.jpg','cat':'interior','material':'帯・織物','use':'食卓や花器の下に','text':'帯の織り柄を、テーブルの上へ。布の長さや柄の流れを活かして、花器を引き立てる一枚に仕立てた作品です。'},
  {'id':'coasters','name':'刺し子入り帯のコースター','en':'Small pieces, everyday.','file':'coasters.jpg','cat':'interior','material':'刺し子入りの帯','use':'お茶の時間に','text':'小さく切り取った布にも、ひとつずつ違う表情があります。帯の色柄と針目を、お茶の時間に楽しむコースターです。'},
@@ -16,7 +16,7 @@ def label(text,n=''):
 def header(c,page):
  num,name,en=CONCEPTS[c]
  nav=''.join(f'<a href="{href}" {"aria-current=page" if page==key else ""}>{text}</a>' for key,href,text in [('home','index.html','ホーム'),('about','about.html','作り手について'),('works','works.html','作品'),('contact','contact.html','お問い合わせ')])
- return f'''<a class="skip" href="#main">本文へ移動</a><div class="preview-bar"><span>DESIGN {num} <i>／</i> {name}</span><a href="../index.html">4つの案を見比べる <span aria-hidden="true">↗</span></a></div><header class="site-header"><a class="brand" href="index.html">onlyyuuka<span>REMAKE ARTIST</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">メニュー <span aria-hidden="true">＋</span></button><nav id="navigation" aria-label="メインナビゲーション">{nav}<a href="#newsletter">お便り</a></nav></header>'''
+ return f'''<a class="skip" href="#main">本文へ移動</a><div class="preview-bar"><span>DESIGN {num} <i>／</i> {name}</span><a href="../index.html">3つの案を見比べる <span aria-hidden="true">↗</span></a></div><header class="site-header"><a class="brand" href="index.html">onlyyuuka<span>REMAKE ARTIST</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">メニュー <span aria-hidden="true">＋</span></button><nav id="navigation" aria-label="メインナビゲーション">{nav}<a href="#newsletter">お便り</a></nav></header>'''
 def newsletter():
  return f'''<section class="newsletter wrap" id="newsletter"><div>{label('LETTER FROM ONLYYUUKA')}<h2>新しい作品ができたら、<br>お便りを。</h2><p>新作や展示のお知らせ、制作途中のひとこまを<br>メールでお届けするニュースレターです。</p></div><form class="newsletter-form"><label for="letter-email">メールアドレス</label><div class="email-row"><input id="letter-email" type="email" placeholder="your@email.com" autocomplete="off" required maxlength="254"><button type="submit" aria-label="ニュースレター登録の確認へ">登録する <span aria-hidden="true">↗</span></button></div><p class="sample-note">ご提案用サンプルのため、メールは登録・送信されません。</p><p class="form-status" role="status"></p></form></section>'''
 def contactband():
@@ -60,7 +60,7 @@ def contact(c):
  return f'''<section class="page-intro wrap">{label('CONTACT')}<h1>まだ、決まって<br>いなくても。</h1><p>作品のこと、展示のこと、一緒につくってみたいこと。<br>まずは、ご相談の内容をお聞かせください。</p></section><section class="contact-layout wrap"><aside><h2>ご相談いただけること</h2><ul><li>作品についてのご質問</li><li>オーダー制作のご相談</li><li>展示・イベントのお誘い</li><li>取材・掲載について</li><li>コラボレーションのご相談</li></ul><p>ご希望や予定が具体的でなくても大丈夫。<br>今お考えのことから、お聞かせください。</p><p class="sample-note">ご提案用のフォームです。入力内容は送信・保存されません。個人情報は入れずにお試しください。</p></aside><div><form id="contact-form"><label for="name">お名前 <span>必須</span></label><input id="name" name="name" required maxlength="80" autocomplete="off" placeholder="例：山田 花子"><label for="email">メールアドレス <span>必須</span></label><input id="email" name="email" type="email" required maxlength="254" autocomplete="off" placeholder="例：hello@example.com"><label for="type">お問い合わせ種別 <span>必須</span></label><select id="type" name="type" required><option value="">選択してください</option><option>作品について</option><option>オーダー相談</option><option>取材・掲載</option><option>展示・イベント</option><option>コラボ依頼</option><option>その他</option></select><label for="message">お問い合わせ内容 <span>必須</span></label><textarea id="message" name="message" rows="6" required maxlength="3000" placeholder="気になる作品や、ご相談の内容をお聞かせください。"></textarea><label class="consent"><input type="checkbox" required><span>送信されないサンプルであることを確認しました</span></label><button class="button" type="submit">入力内容を確認する <span aria-hidden="true">↗</span></button></form><section id="contact-result" class="confirmation" hidden tabindex="-1" aria-labelledby="confirmation-title"><p class="eyebrow">PREVIEW</p><h2 id="confirmation-title">入力内容を確認しました。</h2><p>このサンプルでは送信していません。<br>正式公開時に、お問い合わせの送受信を接続します。</p><dl id="confirmation-values"></dl><button id="edit-contact" class="button" type="button">入力内容を修正する <span aria-hidden="true">←</span></button></section></div></section>{newsletter()}'''
 # Importing the helpers must not rewrite an existing concept.
 if __name__ == '__main__':
- for c in sys.argv[1:] or ['gallery']:
+ for c in sys.argv[1:] or ['atelier','journal']:
   if c not in CONCEPTS: raise SystemExit(c)
   target=ROOT/c; target.mkdir(parents=True,exist_ok=True)
   home={'gallery':gallery_home,'atelier':atelier_home,'journal':journal_home}.get(c)

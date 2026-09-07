@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('designs', ROOT / 'scripts/build-designs.py')
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-base.CONCEPTS['design04'] = ('04', '布の小さなギャラリー — 展示室', 'Textile Gallery')
+base.CONCEPTS['design04'] = ('01', '布の小さなギャラリー — 展示室', 'Textile Gallery')
 
 
 def contactband():
@@ -60,9 +60,9 @@ def home():
 
 def document(page, content):
     html = base.document('design04', page, content)
-    html = html.replace('3つの案を見比べる', '4つの案を見比べる')
+    html = html.replace('3つの案を見比べる', '3つの案を見比べる')
     html = html.replace(base.contactband(), contactband()).replace(base.newsletter(), newsletter()).replace(base.footer(), footer())
-    nav = ''.join(f'<a href="{href}" {"aria-current=page" if page==key else ""}>{label}</a>' for key, href, label in [('works','works.html','作品'),('about','about.html','作り手について'),('contact','contact.html','お問い合わせ')])
+    nav = ''.join(f'<a href="{href}" {"aria-current=page" if page==key else ""}>{label}</a>' for key, href, label in [('home','index.html','ホーム'),('works','works.html','作品'),('about','about.html','作り手について'),('contact','contact.html','お問い合わせ')])
     html = re.sub(r'<nav id="navigation".*?</nav>', f'<nav id="navigation" aria-label="メインナビゲーション">{nav}<a href="#newsletter">お便り</a></nav>', html)
     html = html.replace('まだ、決まって<br>いなくても。','<span>まだ、決まって</span><wbr><span>いなくても。</span>')
     html = html.replace('もとの布を、<br>知るとおもしろい。','<span>もとの布を、</span><wbr><span>知るとおもしろい。</span>')

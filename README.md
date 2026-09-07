@@ -1,17 +1,16 @@
-# onlyyuuka — ホームページのデザイン4案
+# onlyyuuka — ホームページのデザイン3案
 
 リメイクアーティスト onlyyuuka の作品・作り手を紹介する、クライアント提案用サイトです。
 
 ## 提出先
 
-**[4案を見比べる](https://yuearmy.github.io/mock-up/designs/)**
+**[3案を見比べる](https://yuearmy.github.io/mock-up/designs/)**
 
 | 案 | コンセプト | 主役 | ページ |
 |---|---|---|---|
-| 01 | 布の小さなギャラリー | 作品の質感と余白 | [開く](https://yuearmy.github.io/mock-up/designs/gallery/) |
+| 01 | 布の小さなギャラリー — 展示室 | 写真とタイトルが一体のHero | [開く](https://yuearmy.github.io/mock-up/designs/design04/) |
 | 02 | 作り手のアトリエ | 手元・制作の視点・親しみ | [開く](https://yuearmy.github.io/mock-up/designs/atelier/) |
 | 03 | 布をめぐる編集誌 | 素材から作品への変化 | [開く](https://yuearmy.github.io/mock-up/designs/journal/) |
-| 04 | 布の小さなギャラリー — 展示室 | 写真とタイトルが一体のHero | [開く](https://yuearmy.github.io/mock-up/designs/design04/) |
 
 各案は Home / About / Works / Contact の4ページ。色だけでなく、トップの情報順とレイアウトを変えています。
 
@@ -21,7 +20,7 @@
 
 提案資料はClaude Design版へ移行中です。旧PDF・Wordは公開対象から削除しました。
 
-Design 04は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-88a8-3609a8484c1a)を基に静的HTMLへ実装しました。画像生成したUI参照をClaudeへ添付し、実作品には既存資料の写真を使用しています。生成プロンプトは `plans/20260907-design04-image-prompt.txt`、実装・検証記録は `plans/20260907-design04-claude-ui.md` を参照してください。
+Design 01（旧Design 04）は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-88a8-3609a8484c1a)を基に静的HTMLへ実装しました。画像生成したUI参照をClaudeへ添付し、実作品には既存資料の写真を使用しています。生成プロンプトは `plans/20260907-design04-image-prompt.txt`、実装・検証記録は `plans/20260907-design04-claude-ui.md` を参照してください。
 
 ## 動くところ
 
@@ -50,7 +49,7 @@ Design 04は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-8
 
 ## 構成
 
-- `site/designs/` — 今回の4案、比較、準備リスト
+- `site/designs/` — 今回の3案、比較、準備リスト
 - `scripts/build-design04.py` — Claude Design版の4ページを生成
 - `scripts/build-designs.py` — 各案の4ページを生成するテンプレート
 - `scripts/check-design-files.py` — 相対リンク・画像・アンカーの静的確認
@@ -59,11 +58,11 @@ Design 04は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-8
 - `scripts/export-design-pdfs.cjs` — Web版比較・準備リストの印刷（Playwrightが必要）
 - `verification/20260907-ui-review.md` — Computer Useによる確認結果
 - `plans/20260907-design-proposals-implementation.md` — 制作順序と確認記録
-- `site/` 直下 — 以前の提案を保持。トップの案内から今回の4案へ移動可能
+- `site/` 直下 — 以前の提案を保持。トップの案内から今回の3案へ移動可能
 
 ## 再生成とチェック
 
-    python3 scripts/build-designs.py gallery atelier journal
+    python3 scripts/build-designs.py atelier journal
     python3 scripts/build-design04.py
     python3 scripts/check-design-files.py
     node --check site/designs/shared.js
@@ -74,3 +73,5 @@ Computer Useで320 / 390 / 768 / 1024 / 1440pxを確認しました。表示崩�
 ## 公開
 
 mainへのsite/の変更で、既存GitHub ActionsがGitHub Pagesを更新します。配信対象はsite/のみです。契約・本番フォーム接続を伴う本サイトの公開は、別途クライアントと要件を確認します。
+
+表示番号とURL：Design 01は既存の `/designs/design04/` を維持しています。旧ギャラリー版は削除済みです。
