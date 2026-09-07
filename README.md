@@ -18,7 +18,9 @@
 
 ## 提案書
 
-提案資料はClaude Design版へ移行中です。旧PDF・Wordは公開対象から削除しました。
+[提案書PDF（Claude Design版・9ページ）](https://yuearmy.github.io/mock-up/designs/downloads/onlyyuuka-claude-design-proposal.pdf) を公開しています。新Design 01の実Hero画面・3案比較・掲載内容・必要素材・公開までの準備を収録。旧PDF・Wordは公開対象から削除済みです。
+
+元資料: [Claude Design](https://claude.ai/design/p/f09e61cd-8510-4f77-a397-37a430af627a)。ClaudeからProject archiveを出力し、`output/claude-proposal-20260907/` に展開、本体を `proposal.html` にリネームして `scripts/export-claude-proposal.cjs` で同じレイアウトをPDF化します。案01はPC実画面、案02・03はPCとスマートフォン実画面を掲載しています。
 
 Design 01（旧Design 04）は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-88a8-3609a8484c1a)を基に静的HTMLへ実装しました。画像生成したUI参照をClaudeへ添付し、実作品には既存資料の写真を使用しています。生成プロンプトは `plans/20260907-design04-image-prompt.txt`、実装・検証記録は `plans/20260907-design04-claude-ui.md` を参照してください。
 
