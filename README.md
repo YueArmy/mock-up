@@ -1,16 +1,17 @@
-# onlyyuuka — ホームページのデザイン3案
+# onlyyuuka — ホームページのデザイン4案
 
 リメイクアーティスト onlyyuuka の作品・作り手を紹介する、クライアント提案用サイトです。
 
 ## 提出先
 
-**[3案を見比べる](https://yuearmy.github.io/mock-up/designs/)**
+**[4案を見比べる](https://yuearmy.github.io/mock-up/designs/)**
 
 | 案 | コンセプト | 主役 | ページ |
 |---|---|---|---|
 | 01 | 布の小さなギャラリー | 作品の質感と余白 | [開く](https://yuearmy.github.io/mock-up/designs/gallery/) |
 | 02 | 作り手のアトリエ | 手元・制作の視点・親しみ | [開く](https://yuearmy.github.io/mock-up/designs/atelier/) |
 | 03 | 布をめぐる編集誌 | 素材から作品への変化 | [開く](https://yuearmy.github.io/mock-up/designs/journal/) |
+| 04 | 布の小さなギャラリー — 展示室 | 写真とタイトルが一体のHero | [開く](https://yuearmy.github.io/mock-up/designs/design04/) |
 
 各案は Home / About / Works / Contact の4ページ。色だけでなく、トップの情報順とレイアウトを変えています。
 
@@ -20,7 +21,7 @@
 
 提案資料はClaude Design版へ移行中です。旧PDF・Wordは公開対象から削除しました。
 
-3案の狙いと向いている目的、掲載コンテンツ、必要な写真・原稿、確認担当、公開までに決める事項を1冊に整理しました。WordからPDFへ変換し、全ページの文字・画像・表を確認済みです。
+Design 04は[Claude DesignのUI](https://claude.ai/design/p/fe7dba6d-9b76-4643-88a8-3609a8484c1a)を基に静的HTMLへ実装しました。画像生成したUI参照をClaudeへ添付し、実作品には既存資料の写真を使用しています。生成プロンプトは `plans/20260907-design04-image-prompt.txt`、実装・検証記録は `plans/20260907-design04-claude-ui.md` を参照してください。
 
 ## 動くところ
 
@@ -49,19 +50,21 @@
 
 ## 構成
 
-- `site/designs/` — 今回の3案、比較、準備リスト
+- `site/designs/` — 今回の4案、比較、準備リスト
+- `scripts/build-design04.py` — Claude Design版の4ページを生成
 - `scripts/build-designs.py` — 各案の4ページを生成するテンプレート
 - `scripts/check-design-files.py` — 相対リンク・画像・アンカーの静的確認
 - `scripts/verify-designs.cjs` — 1案目完成時に実行したブラウザ検証（Playwrightが必要）
-- `scripts/build-proposal-docx.py` — 提案書の再生成（python-docx/Pillowが必要）
+- `scripts/build-proposal-docx.py` — 旧提案書の生成スクリプト（現在の提出対象外）
 - `scripts/export-design-pdfs.cjs` — Web版比較・準備リストの印刷（Playwrightが必要）
 - `verification/20260907-ui-review.md` — Computer Useによる確認結果
 - `plans/20260907-design-proposals-implementation.md` — 制作順序と確認記録
-- `site/` 直下 — 以前の提案を保持。トップの案内から今回の3案へ移動可能
+- `site/` 直下 — 以前の提案を保持。トップの案内から今回の4案へ移動可能
 
 ## 再生成とチェック
 
     python3 scripts/build-designs.py gallery atelier journal
+    python3 scripts/build-design04.py
     python3 scripts/check-design-files.py
     node --check site/designs/shared.js
     node --check site/designs/proposal.js

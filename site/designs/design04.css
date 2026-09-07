@@ -1,0 +1,242 @@
+/* Claude Design UI adaptation: fe7dba6d-9b76-4643-88a8-3609a8484c1a */
+@font-face{font-family:'Onlyyuuka Mincho';src:url('assets/fonts/onlyyuuka-mincho.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Onlyyuuka Labels';src:url('assets/fonts/onlyyuuka-labels.woff') format('woff');font-weight:100 900;font-style:normal;font-display:swap}
+.design04{--line:#d9d0c4;--muted:#746859;--serif:'Onlyyuuka Mincho','Yu Mincho','Hiragino Mincho ProN',serif;--sans:'Onlyyuuka Labels','Hiragino Sans',sans-serif;font-family:var(--serif);font-size:15px;line-height:2.15}
+.design04 .wrap{max-width:1312px;width:calc(100% - clamp(40px,8vw,128px))}
+.design04 .eyebrow{font-family:var(--sans);font-size:10px;letter-spacing:.3em;color:var(--accent)}
+.design04 .preview-bar{font-family:var(--sans);font-size:10px;background:#eae3d9;min-height:33px}
+.design04 .site-header{max-width:none;height:88px;padding-inline:max(calc((100vw - 1312px)/2),4vw);border-bottom:1px solid var(--line);background:#f7f2eaf5;position:sticky;top:0;z-index:40;backdrop-filter:blur(8px)}
+.design04 .brand{font-family:var(--serif);font-size:23px;letter-spacing:.08em}
+.design04 .brand span{font-size:8px;letter-spacing:.3em;color:var(--accent);margin-top:8px}
+.design04 .site-header nav{font-size:13px;gap:32px;letter-spacing:.08em}
+.design04 .button{border:1px solid var(--accent);border-radius:0;min-width:190px;min-height:60px;padding:17px 28px;font-size:14px;justify-content:center;letter-spacing:.12em}
+.design04 .button-outline{color:var(--ink);background:transparent;border-color:#b9a58d}
+.design04 .button-outline:hover{background:#ece4d8}
+.design04 .text-link{font-size:13px;letter-spacing:.08em;border-bottom-color:#aa9b8c;gap:25px}
+.design04 .exhibition-hero{position:relative;isolation:isolate;min-height:840px;height:calc(100svh - 121px);max-height:1080px;text-align:center;background:#d9d0c2;overflow:hidden}
+.design04 .exhibition-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 63%;z-index:-2}
+.design04 .exhibition-hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#f7f2eaf2 0%,#f7f2eaed 30%,#f7f2eadb 44%,#f7f2ea80 56%,#f7f2ea1f 68%,#f7f2ea00 78%)}
+.design04 .exhibition-hero-content{position:relative;padding-top:clamp(48px,5vw,72px)}
+.design04 .exhibition-hero .eyebrow{justify-content:center;font-size:11px;letter-spacing:.42em;margin-bottom:clamp(22px,2.6vw,34px)}
+.design04 .exhibition-hero h1{font-size:clamp(31px,5.2vw,74px);font-weight:400;line-height:1.42;letter-spacing:.1em;text-wrap:balance;margin:0 auto clamp(26px,3vw,40px)}
+.design04 .exhibition-lead{font-size:clamp(14px,1.15vw,17px);line-height:2.15;letter-spacing:.06em;margin-bottom:clamp(34px,4vw,52px)}
+.design04 .exhibition-hero h1 span{display:inline-block;white-space:nowrap}
+.design04 .exhibition-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:clamp(12px,1.4vw,20px)}
+.design04 .exhibition-caption{position:absolute;bottom:20px;left:4%;right:4%;display:flex;justify-content:space-between;gap:14px;font:10px/1.8 var(--sans);letter-spacing:.12em;color:var(--ink)}
+.design04 .exhibition-caption span{background:#f7f2eae8;padding:3px 7px}
+.design04 .exhibition-hero .button-outline{background:#f7f2ea9c}
+.design04 .exhibition-concept{margin-top:clamp(76px,9vw,140px);border-top:1px solid var(--line);padding-top:clamp(34px,4vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,88px)}
+.design04 .exhibition-concept h2{font-size:clamp(25px,2.9vw,38px);line-height:1.65;letter-spacing:.08em;margin-top:18px}
+.design04 .exhibition-concept>div>p:not(.eyebrow){font-size:15px;line-height:2.2;margin-bottom:22px}
+.design04 .selected-works{padding-top:clamp(72px,9vw,140px)}
+.design04 .section-heading{border-bottom:1px solid var(--line);padding-bottom:30px;margin:18px 0 44px}
+.design04 .section-heading h2{font-size:clamp(27px,3.6vw,46px);line-height:1.5;letter-spacing:.1em}
+.design04 .works-grid{gap:26px}
+.design04 .work figure{aspect-ratio:3/4;background:#eae5dd}
+.design04 .work img{padding:0;object-fit:contain}
+.design04 .work-meta{font-family:var(--sans);font-size:10px;margin-top:21px}
+.design04 .work h3{font-size:20px;line-height:1.65;margin-top:10px}
+.design04 .work p{font-size:13px;line-height:1.9}
+.design04 .work-view{border-radius:0;font-size:11px;padding:7px 12px;background:#f7f2eaf5}
+.design04 .sample-note{font-family:var(--sans);font-size:11px!important;line-height:1.9}
+.design04 .artist-section{padding:clamp(84px,10vw,144px) 0;gap:9%}
+.design04 .artist-section figure img{aspect-ratio:1.05}
+.design04 .artist-section h2{font-size:clamp(26px,3vw,40px);line-height:1.7;letter-spacing:.08em}
+.design04 .artist-section p:not(.eyebrow){font-size:15px;line-height:2.2}
+.design04 figcaption{font-family:var(--sans);font-size:11px;color:var(--muted);line-height:1.8}
+.design04 .contact-band{display:block;text-align:center;padding:68px 0 74px}
+.design04 .contact-band>.eyebrow{justify-content:center}
+.design04 .contact-band h2{font-size:clamp(29px,3.7vw,46px);margin:20px 0}
+.design04 .contact-band>div{display:flex;flex-direction:column;gap:28px}
+.design04 .contact-band>div>p{max-width:none;font-size:14px;line-height:2.2}
+.design04 .round-link{width:auto;height:auto;border-radius:0;min-width:210px;min-height:58px;padding:13px 28px;font-size:14px;gap:28px;background:var(--accent);color:white}
+.design04 .round-link:hover{background:#6b513d}
+.design04 .newsletter{padding:76px 0 84px;gap:12%}
+.design04 .newsletter>*{min-width:0}
+.design04 .newsletter h2{font-size:30px}
+.design04 .newsletter p:not(.eyebrow){font-size:13px}
+.design04 .newsletter-form label{font-size:13px}
+.design04 .email-row input{font-family:var(--sans);font-size:16px;min-height:54px}
+.design04 .email-row button{font-size:13px}
+.design04 .site-footer{padding:38px 0;border-top:1px solid var(--line)}
+.design04 .site-footer>div{font-size:12px}
+.design04 .site-footer small{font:11px/1.9 var(--sans)}
+.design04 .page-intro{padding:70px 0 60px;text-align:center;border-bottom:1px solid var(--line);margin-bottom:55px}
+.design04 .page-intro .eyebrow{justify-content:center}
+.design04 .page-intro h1{font-size:clamp(32px,4vw,56px);line-height:1.65;margin:25px 0}
+.design04 .page-intro>p:last-child{font-size:15px;line-height:2.1}
+.design04 .about-feature h2{font-size:46px;letter-spacing:.08em}
+.design04 .about-feature p:not(.eyebrow),.design04 .values article p{font-size:14px}
+.design04 .about-feature{padding-bottom:80px}
+.design04 .values{padding:64px 0 90px}
+.design04 .values h3{font-size:23px}
+.design04 .all-works{padding-bottom:75px}
+.design04 .filters{gap:30px;margin-bottom:35px;flex-wrap:wrap}
+.design04 .filters button{font-size:13px;min-height:50px}
+.design04 .faq{padding-bottom:80px}
+.design04 .faq summary,.design04 .faq details p{font-size:14px}
+.design04 .contact-layout{padding-bottom:75px;gap:9%;grid-template-columns:.85fr 1.15fr}
+.design04 .contact-layout aside h2{font-size:23px}
+.design04 .contact-layout ul,.design04 .contact-layout aside p{font-size:14px}
+.design04 .contact-layout form>label{font-size:14px}
+.design04 .contact-layout input:not([type=checkbox]),.design04 .contact-layout select,.design04 .contact-layout textarea{font-family:var(--sans);font-size:16px;background:transparent;min-height:54px;border-color:#bcb0a1}
+.design04 .contact-layout .consent span{font-size:12px!important}
+.design04 .dialog-copy>p{font-size:14px}
+.design04 .dialog-copy dl{font-size:13px;grid-template-columns:90px 1fr}
+.design04 .dialog-copy .button{font-size:12px;min-width:0;width:100%;padding:13px 18px;letter-spacing:.03em}
+.design04 .dialog-close{border-radius:0}
+.design04 .confirmation p,.design04 .confirmation dl{font-size:14px}
+@media(max-width:1000px){
+ .design04 .site-header nav{gap:20px;font-size:12px}
+ .design04 .work h3{font-size:18px}
+ .design04 .newsletter{gap:6%}
+ .design04 .contact-layout{gap:6%}
+}
+@media(max-width:720px){
+ .design04 .preview-bar{font-size:9px;padding-inline:20px;gap:10px}
+ .design04 .preview-bar>span{max-width:58%;line-height:1.6}
+ .design04 .preview-bar i{display:none}
+ .design04 .site-header{height:72px;padding-inline:20px}
+ .design04 .brand{font-size:23px}
+ .design04 .site-header nav{top:72px;font-size:14px;gap:5px;padding:20px}
+ .design04 .menu-toggle{font-size:12px;min-height:44px}
+ .design04 .exhibition-hero{height:690px;min-height:690px;max-height:none}
+ .design04 .exhibition-hero-content{padding-top:40px}
+ .design04 .exhibition-backdrop{object-position:50% 50%}
+ .design04 .exhibition-hero h1{font-size:clamp(28px,7.5vw,44px);line-height:1.6;letter-spacing:.06em;margin-bottom:24px}
+ .design04 .exhibition-hero .eyebrow{font-size:9px;margin-bottom:25px;letter-spacing:.3em}
+ .design04 .exhibition-lead{font-size:13px;line-height:2.2;margin-bottom:30px}
+ .design04 .exhibition-actions{gap:12px;flex-wrap:nowrap}
+ .design04 .exhibition-actions .button{flex:1;min-width:0;font-size:12px;letter-spacing:.03em;padding:13px 8px;min-height:52px}
+ .design04 .exhibition-caption{font-size:9px;letter-spacing:0;bottom:14px;left:16px;right:16px;gap:8px}
+ .design04 .exhibition-caption span:first-child{font-size:7px}
+ .design04 .exhibition-concept{grid-template-columns:1fr;margin-top:66px;padding-top:34px;gap:26px}
+ .design04 .exhibition-concept h2{font-size:28px}
+ .design04 .exhibition-concept>div>p:not(.eyebrow){font-size:14px;line-height:2.2}
+ .design04 .selected-works{padding-top:50px}
+ .design04 .section-heading{padding-bottom:24px;margin-bottom:28px}
+ .design04 .section-heading h2{font-size:29px;letter-spacing:.05em}
+ .design04 .section-heading .text-link{font-size:12px;white-space:normal}
+ .design04 .works-grid{gap:37px}
+ .design04 .work figure{aspect-ratio:4/5}
+ .design04 .work h3{font-size:21px}
+ .design04 .work-meta{font-size:10px}
+ .design04 .artist-section{padding:70px 0;gap:32px}
+ .design04 .artist-section p:not(.eyebrow){font-size:14px}
+ .design04 .contact-band{padding:50px 0}
+ .design04 .contact-band>div>p{font-size:13px}
+ .design04 .newsletter{padding:54px 0;gap:30px}
+ .design04 .newsletter h2{font-size:28px}
+ .design04 .site-footer>div{font-size:12px;gap:14px 22px}
+ .design04 .page-intro{padding:45px 0 38px;margin-bottom:36px}
+ .design04 .page-intro h1{font-size:32px;line-height:1.65;letter-spacing:.03em}
+ .design04 .page-intro>p:last-child{font-size:13px}
+ .design04 .about-feature{padding-bottom:46px;gap:32px}
+ .design04 .about-feature h2{font-size:38px}
+ .design04 .values{padding:35px 0 55px}
+ .design04 .filters{gap:10px 18px}
+ .design04 .filters button{font-size:12px}
+ .design04 .filters button span{font-size:10px}
+ .design04 .faq{padding-bottom:50px}
+ .design04 .faq summary{font-size:13px}
+ .design04 .contact-layout{grid-template-columns:1fr;gap:35px;padding-bottom:50px}
+ .design04 .contact-layout aside p{font-size:13px}
+}
+
+/* Match the rendered Claude Design sections, including their own structure. */
+.design04 .wrap{max-width:1312px;width:calc(100% - clamp(40px,8vw,128px))}
+.design04 .d4-container{width:100%;max-width:1440px;margin:auto;padding-inline:clamp(20px,4vw,64px)}
+.design04 .d4-contact{margin-top:clamp(76px,9vw,148px)}
+.design04 .d4-contact>.d4-container{border-top:1px solid rgba(47,41,36,.12);text-align:center;padding-block:clamp(72px,9vw,140px)}
+.design04 .d4-contact .eyebrow{justify-content:center;margin:0 0 clamp(20px,2.6vw,32px);font-size:10px;letter-spacing:.36em}
+.design04 .d4-contact h2{margin:0 0 22px;font-size:clamp(26px,3.4vw,44px);line-height:1.5;letter-spacing:.08em}
+.design04 .d4-contact-copy{margin:0 auto 38px;max-width:34em;font-size:clamp(13.5px,1.05vw,15px);line-height:2.1;color:#2f2924bd}
+.design04 .d4-contact-button{display:inline-flex;align-items:center;gap:12px;background:#8a6a4f;color:#f7f2ea;padding:17px 44px;font-size:14px;letter-spacing:.16em}
+.design04 .d4-contact-button:hover{background:#6b513d}
+.design04 .d4-newsletter{background:#efe7da;border-top:1px solid #2f29241f}
+.design04 .d4-newsletter>.d4-container{padding-block:clamp(64px,7.5vw,116px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(32px,5vw,80px);align-items:start}
+.design04 .d4-newsletter .eyebrow{margin:0 0 24px;font-size:10px;letter-spacing:.36em}
+.design04 .d4-newsletter h2{margin:0 0 18px;font-size:clamp(22px,2.6vw,34px);line-height:1.6;letter-spacing:.08em}
+.design04 .d4-newsletter p:not(.eyebrow){font-size:13.5px;line-height:2.1;color:#2f2924bd}
+.design04 .d4-newsletter .newsletter-form{display:flex;flex-direction:column;gap:14px;max-width:460px;min-width:0}
+.design04 .d4-newsletter label{font-size:12px;letter-spacing:.14em;margin:0;color:#2f2924b8}
+.design04 .d4-newsletter input{width:100%;min-width:0;background:#f7f2ea;border:1px solid #2f29243d;padding:15px 16px;font-size:16px;color:#2f2924;border-radius:0;line-height:1.4}
+.design04 .d4-newsletter button{align-self:flex-start;background:none;border:1px solid #8a6a4f;color:#8a6a4f;padding:15px 38px;font-size:13.5px;letter-spacing:.16em;line-height:1.5}
+.design04 .d4-newsletter button:hover{background:#f7f2ea}
+.design04 .d4-newsletter .sample-note{margin:4px 0 0;font-size:11.5px!important;line-height:1.9;color:#2f2924a8}
+.design04 .d4-newsletter .form-status:empty{display:none}
+.design04 .d4-footer{border-top:1px solid #2f29241f}
+.design04 .d4-footer-top{padding-top:clamp(48px,5vw,72px);padding-bottom:clamp(36px,4vw,52px);display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start}
+.design04 .d4-footer-brand{font-size:19px;letter-spacing:.08em}
+.design04 .d4-footer nav{display:flex;flex-wrap:wrap;gap:clamp(18px,2.4vw,34px);font-size:13px;letter-spacing:.1em}
+.design04 .d4-footer-bottom{padding-bottom:clamp(40px,4vw,56px);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+.design04 .d4-footer-bottom p:first-child{font:10.5px/1.9 var(--sans);letter-spacing:.22em;color:#2f292499}
+.design04 .d4-footer-bottom p:last-child{max-width:46em;font-size:11.5px;line-height:1.9;color:#2f2924a8}
+.design04 .d4-artist{padding-top:clamp(76px,9vw,148px)}
+.design04 .d4-artist figure img{width:100%;height:clamp(240px,36vw,500px);object-fit:cover}
+.design04 .d4-artist figcaption{margin-top:16px;font-size:12px;letter-spacing:.1em;text-align:right}
+.design04 .d4-artist-copy{margin-top:clamp(40px,5vw,72px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,88px);border-top:1px solid #2f292424;padding-top:clamp(34px,4vw,56px)}
+.design04 .d4-artist-copy .eyebrow{margin:0 0 14px;letter-spacing:.36em}
+.design04 .d4-artist-copy h2{font-size:clamp(23px,2.9vw,38px);line-height:1.65;letter-spacing:.08em}
+.design04 .d4-artist-copy>div>p:not(.eyebrow){margin:0 0 28px;font-size:clamp(13.5px,1.05vw,15.5px);line-height:2.2;color:#2f2924d1}
+.design04 .d4-concept-note{font-size:12px!important;letter-spacing:.2em;color:var(--accent);margin-top:28px}
+.design04 .works-grid{gap:clamp(24px,3vw,44px)}
+.design04 .d4-work .work-open{display:flex;flex-direction:column;gap:18px;width:100%}
+.design04 .d4-work img{width:100%;height:clamp(240px,26vw,380px);object-fit:cover;aspect-ratio:auto}
+.design04 .d4-work-title{display:flex;gap:14px;align-items:baseline;text-align:left}
+.design04 .d4-work-title>span:first-child{font:11px/1.7 var(--sans);letter-spacing:.2em;color:var(--accent)}
+.design04 .d4-work-title>span:last-child{font-size:15px;line-height:1.7;letter-spacing:.08em}
+.design04 .d4-work-info{font-size:12.5px;letter-spacing:.08em;line-height:1.9;color:#2f2924a8;margin-top:-8px;text-align:left}
+.design04 .d4-all-works{margin-top:clamp(32px,4vw,54px);display:flex;justify-content:center}
+.design04 .selected-works>.sample-note{text-align:center;margin:clamp(26px,3vw,38px) 0 0;font-size:11.5px!important}
+.design04 .page-intro{padding:clamp(52px,7vw,100px) 0 0;border:0;margin-bottom:0}
+.design04 .page-intro .eyebrow{font-size:11px;letter-spacing:.42em;margin:0 0 clamp(20px,2.4vw,32px)}
+.design04 .page-intro h1{font-size:clamp(28px,4.4vw,60px);line-height:1.45;letter-spacing:.1em;margin:0 auto 26px}
+.design04 .page-intro>p:last-child{max-width:38em;margin:auto;font-size:clamp(13.5px,1.05vw,16px);line-height:2.1;letter-spacing:.05em;color:#2f2924c7}
+.design04 .contact-layout{margin-top:clamp(52px,6.5vw,104px);padding-top:clamp(34px,4vw,56px);padding-bottom:0;border-top:1px solid #2f292424;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(34px,5vw,88px);align-items:start}
+.design04 .contact-layout aside h2{font-size:clamp(19px,2vw,26px);margin:0 0 22px;line-height:1.7;letter-spacing:.08em}
+.design04 .contact-layout ul{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-direction:column;gap:12px}
+.design04 .contact-layout li{font-size:13.5px;letter-spacing:.06em;line-height:1.9;border-bottom:1px solid #2f29241a;padding-bottom:12px}
+.design04 .contact-layout li:last-child{border:0;padding-bottom:0}
+.design04 .contact-layout aside>p{margin:0 0 20px;font-size:13.5px;line-height:2.1}
+.design04 .contact-layout aside .sample-note{background:transparent;padding:18px 0 0;border-top:1px solid #2f292424;font-size:11.5px!important}
+.design04 #contact-form{max-width:560px}
+.design04 .contact-layout form>label{font-size:12.5px;letter-spacing:.14em;color:#2f2924bd;margin:0 0 10px}
+.design04 .contact-layout input:not([type=checkbox]),.design04 .contact-layout select,.design04 .contact-layout textarea{background:#fcfaf6;border:1px solid #2f29243d;padding:15px 16px;font:16px/1.4 var(--serif);min-height:0;margin:0 0 26px;border-radius:0}
+.design04 .contact-layout textarea{line-height:1.9}
+.design04 .contact-layout .consent{margin-bottom:26px;font-size:13px;letter-spacing:0}
+.design04 .contact-layout .consent span{font-size:13px!important}
+.design04 .contact-layout button.button{width:auto;min-width:0;min-height:0;padding:18px 44px;font-size:14px;letter-spacing:.16em}
+.design04.contact-page .d4-newsletter{margin-top:clamp(76px,9vw,140px)}
+@media(max-width:720px){
+ .design04 .d4-newsletter>.d4-container,.design04 .d4-artist-copy,.design04 .contact-layout{grid-template-columns:1fr}
+ .design04 .d4-work img{height:clamp(240px,70vw,380px)}
+ .design04 .d4-footer nav{gap:18px 24px}
+ .design04 .d4-newsletter>.d4-container>*{min-width:0}
+}
+.design04 .page-intro h1 span{display:inline-block}
+.design04 .d4-about-photo{margin-top:clamp(40px,5.5vw,80px)}
+.design04 .d4-about-photo img{width:100%;height:clamp(240px,40vw,540px);object-fit:cover}
+.design04 .d4-about-photo figcaption{margin-top:16px;text-align:right;font-size:12px;letter-spacing:.1em}
+.design04 .d4-about-intro{margin-top:clamp(70px,8vw,132px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,88px);border-top:1px solid #2f292424;padding-top:clamp(34px,4vw,56px)}
+.design04 .d4-about-intro .eyebrow{margin-bottom:14px;letter-spacing:.36em}
+.design04 .d4-about-intro h2{font-size:clamp(26px,3.2vw,42px);line-height:1.5;letter-spacing:.14em}
+.design04 .d4-about-intro>div>p:not(.eyebrow){font-size:clamp(13.5px,1.05vw,15.5px);line-height:2.2;margin-bottom:26px;color:#2f2924d6}
+.design04 .d4-about-intro .sample-note{border-top:1px solid #2f292424;padding-top:16px;margin:0!important;font-size:11.5px!important}
+.design04 .d4-values{padding-top:clamp(70px,8vw,132px)}
+.design04 .d4-values>.eyebrow{font-size:11px;letter-spacing:.3em;margin-bottom:14px}
+.design04 .d4-values h2{font-size:clamp(24px,3.4vw,44px);line-height:1.55;letter-spacing:.1em;margin:0 0 clamp(30px,3.6vw,50px);padding-bottom:clamp(24px,3vw,38px);border-bottom:1px solid #2f292424}
+.design04 .d4-values>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,64px)}
+.design04 .d4-values article>.eyebrow{margin-bottom:16px;font-size:11px;letter-spacing:.24em}
+.design04 .d4-values h3{font-size:clamp(17px,1.5vw,21px);line-height:1.7;letter-spacing:.08em;margin-bottom:16px}
+.design04 .d4-values article>p:last-child{font-size:13.5px;line-height:2.1;color:#2f2924c7}
+@media(max-width:900px){.design04 .d4-values>div{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.design04 .d4-about-intro,.design04 .d4-values>div{grid-template-columns:1fr}}
+.design04 .d4-collection{padding-top:clamp(52px,6.5vw,104px)}
+.design04 .d4-collection .filters{justify-content:center;border-top:0;margin:0;border-bottom:1px solid #2f292424;padding-bottom:30px;gap:clamp(20px,2.6vw,38px)}
+.design04 .d4-collection .filters button{font-size:13px;letter-spacing:.12em;min-height:40px;padding:0 3px 7px}
+.design04 #filter-result{text-align:center;font-size:12px;color:#2f2924a8;margin:28px 0 44px;letter-spacing:.08em}
+.design04 .d4-work-detail{width:100%;padding-bottom:6px;border-bottom:1px solid #2f292447;font-size:12px;letter-spacing:.16em;color:#2f2924a8;text-align:left}
+.design04 .d4-collection>.sample-note{text-align:center;margin:clamp(32px,4vw,54px) 0 0;font-size:11.5px!important}
+.design04 .d4-work-faq h3{font-size:clamp(15px,1.3vw,18px)}
+@media(max-width:720px){.design04 .d4-collection .filters{gap:12px 18px}.design04 .d4-collection .filters button{font-size:11px}}

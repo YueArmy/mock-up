@@ -3,6 +3,7 @@
 .env
 .env.*
 node_modules/
+__pycache__/
 
 # Local delivery packages and visual QA renders
 output/
