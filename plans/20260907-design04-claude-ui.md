@@ -43,3 +43,6 @@ https://claude.ai/design/p/fe7dba6d-9b76-4643-88a8-3609a8484c1a
 - PCの下層ページ見出しを固定2行から自然改行へ。スマホでは文節を保つ。
 - ロゴの文字間隔はAGENTS.mdの0.08em、フォーム入力はスマホの拡大防止のため16pxを維持する。
 - Shippori Mincho / Jostの字形を同梱し、OS標準フォント由来の差異も解消。掲載文字のサブセットとOFLライセンスを保存し、外部フォント配信への実行時依存を避けた。
+
+## 完了
+Design 04の4ページと比較ページをmainへpush。GitHub Actions 34103268320が成功し、公開ページ・フォントのHTTP 200とComputer Useでの公開版表示を確認。詳細は `verification/20260907-design04-ui-review.md`。

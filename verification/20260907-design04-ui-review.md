@@ -36,4 +36,12 @@
 - shared.js / proposal.js の構文検査。
 - git diff --check。
 
-実機端末での検証は未実施。公開結果はGitHub Actionsと公開URLで別途確認する。
+実機端末での検証は未実施。
+
+## 公開確認
+
+- サイト実装コミット: 2ea63ff24a771a699888dacadf31cb6c0f209ae0
+- GitHub Actions: 34103268320、success。
+- 公開した比較ページ・Design 04の4ページ・CSS・フォントがHTTP 200。
+- 公開版をComputer Useで開き、お問い合わせCTA・お便りの新構造、背景色、フォント読込、画像失敗0を確認。
+- 公開URL: https://yuearmy.github.io/mock-up/designs/design04/
