@@ -11,3 +11,5 @@
 - Claude Designの既存9ページ資料を更新。新01の実Heroを添付し、表紙・案01・比較説明・URLを差し替え。旧01のスマホ画面は削除。
 - ClaudeのProject archiveからレイアウトを変更せずPDFへ書き出し、全9ページを画像で確認。旧gallery・GitHubリポジトリ・旧PDFへの参照なし。
 - 提案書PDFを比較ページから公開。サイト更新2712444のGitHub Pagesデプロイ成功、新3案200・旧gallery404確認。
+
+- 提出画面の制作ツール名を削除。PDFの公開ファイル名も `onlyyuuka-proposal.pdf` に統一（資料本文にツール名の記載なし）。
