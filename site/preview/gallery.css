@@ -50,3 +50,20 @@
 }
 @media(max-width:360px){.product-intro h2{font-size:28px}.product-index>.wrap{gap:8px}.product-index a{font-size:9px}.product-end{align-items:flex-start;flex-direction:column;gap:10px}}
 @media print{.product-index{position:static}.product-entry .product-main-image{position:static}}
+/* A compact catalog: select a work before reading its details. */
+.catalog-picker{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;padding:0 0 28px}
+.catalog-choice{display:block;padding-bottom:12px;border-bottom:2px solid transparent;min-width:0}
+.catalog-choice[aria-current="true"]{border-color:var(--brown)}
+.catalog-choice img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#ece5dc;padding:15px}
+.catalog-name,.catalog-kind{display:block;margin-top:9px;font-size:12px;line-height:1.7}
+.catalog-kind{font-size:10px;color:var(--muted);margin-top:2px}
+.catalog-choice:hover{color:var(--brown)}
+.catalog-enabled .product-entry[hidden]{display:none}
+.catalog-enabled .product-entry{border-top:1px solid var(--line);margin-top:0;padding-top:35px}
+.catalog-enabled .product-hero{padding-bottom:40px}
+.catalog-enabled .product-features,.catalog-enabled .product-specs{padding-top:35px;padding-bottom:40px}
+.catalog-enabled .product-main-image{position:static}
+.catalog-enabled .product-main-image img{height:auto;max-height:480px;aspect-ratio:1;object-fit:contain}
+.story-more summary{display:inline-flex;border-bottom:1px solid #ac9580;padding:10px 0;font-size:12px}
+.story-more p:first-of-type{margin-top:20px}
+@media(max-width:760px){.catalog-picker{gap:10px}.catalog-choice img{padding:7px}.catalog-name{font-size:11px;overflow-wrap:anywhere}.catalog-kind{font-size:9px}.catalog-enabled .product-entry{padding-top:24px}.catalog-enabled .product-hero{padding-bottom:30px}.catalog-enabled .product-main-image img{max-height:390px}.catalog-enabled .product-features,.catalog-enabled .product-specs{padding-top:28px;padding-bottom:30px}}

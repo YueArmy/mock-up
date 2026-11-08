@@ -21,3 +21,20 @@ if(form){
  document.querySelector('#edit-draft').addEventListener('click',()=>{result.hidden=true;form.hidden=false;message.focus();});
  document.querySelector('#copy-draft').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(draft.textContent);copyStatus.textContent='お問い合わせ文をコピーしました。送信はしていません。';}catch{copyStatus.textContent='コピーできませんでした。上の文章を選択してコピーしてください。';}});
 }
+
+// Keep all products readable without JavaScript; enhance with hash-addressable selection.
+const catalogChoices=[...document.querySelectorAll('[data-product-choice]')];
+if(catalogChoices.length){
+ const entries=[...document.querySelectorAll('.product-entry')];
+ document.body.classList.add('catalog-enabled');
+ function showProduct(){
+  const id=decodeURIComponent(location.hash.slice(1));
+  if(id && !entries.some(e=>e.id===id))return;
+  const selected=id||entries[0].id;
+  entries.forEach(e=>{e.hidden=e.id!==selected;});
+  catalogChoices.forEach(a=>{if(a.dataset.productChoice===selected)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
+  if(id===selected)requestAnimationFrame(()=>document.getElementById(selected).scrollIntoView({block:'start'}));
+ }
+ window.addEventListener('hashchange',showProduct);
+ showProduct();
+}
