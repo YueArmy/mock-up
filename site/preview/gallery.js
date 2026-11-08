@@ -29,8 +29,8 @@ if(catalogChoices.length){
  document.body.classList.add('catalog-enabled');
  function showProduct(){
   const id=decodeURIComponent(location.hash.slice(1));
-  if(id && !entries.some(e=>e.id===id))return;
-  const selected=id||entries[0].id;
+  if(id && !entries.some(e=>e.id===id) && entries.some(e=>e.hidden))return;
+  const selected=entries.some(e=>e.id===id)?id:entries[0].id;
   entries.forEach(e=>{e.hidden=e.id!==selected;});
   catalogChoices.forEach(a=>{if(a.dataset.productChoice===selected)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');});
   if(id===selected)requestAnimationFrame(()=>document.getElementById(selected).scrollIntoView({block:'start'}));
