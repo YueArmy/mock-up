@@ -64,8 +64,6 @@
 .catalog-enabled .product-features,.catalog-enabled .product-specs{padding-top:35px;padding-bottom:40px}
 .catalog-enabled .product-main-image{position:static}
 .catalog-enabled .product-main-image img{height:auto;max-height:480px;aspect-ratio:1;object-fit:contain}
-.story-more summary{display:inline-flex;border-bottom:1px solid #ac9580;padding:10px 0;font-size:12px}
-.story-more p:first-of-type{margin-top:20px}
 @media(max-width:760px){.catalog-picker{gap:10px}.catalog-choice img{padding:7px}.catalog-name{font-size:11px;overflow-wrap:anywhere}.catalog-kind{font-size:9px}.catalog-enabled .product-entry{padding-top:24px}.catalog-enabled .product-hero{padding-bottom:30px}.catalog-enabled .product-main-image img{max-height:390px}.catalog-enabled .product-features,.catalog-enabled .product-specs{padding-top:28px;padding-bottom:30px}}
 /* 商品名、説明、仕様を写真の横にまとめる。 */
 .product-intro .product-title{font-size:clamp(24px,2.3vw,32px);line-height:1.6;letter-spacing:.025em;margin:0 0 18px;color:var(--ink)}
