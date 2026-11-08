@@ -103,3 +103,10 @@ html{scroll-padding-top:100px}
 @media print{.site-header{position:static}}
 /* ストーリーの長さにかかわらず、写真と文章の上端を保つ。 */
 .maker{align-items:start}
+/* 購入案内の見出しと商品種別の階層 */
+.purchase-section{border-top:1px solid var(--line);padding-top:45px}
+.purchase-section>h2{font-size:clamp(27px,2.4vw,32px);line-height:1.5;margin:0 0 30px}
+.purchase-section .buying-types{padding-top:0}
+.purchase-section .buying-types article>h3{font:400 23px/1.7 var(--serif);letter-spacing:.04em;margin:8px 0 0}
+.purchase-section .pending-slot h4{font:400 16px/1.7 var(--serif);margin:0}
+@media(max-width:760px){.purchase-section{padding-top:35px}.purchase-section>h2{font-size:27px;margin-bottom:26px}.purchase-section .buying-types article>h3{font-size:22px}}
