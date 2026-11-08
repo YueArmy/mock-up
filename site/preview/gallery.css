@@ -103,3 +103,5 @@ html{scroll-padding-top:100px}
 @media(max-width:1050px){html{scroll-padding-top:100px}.site-header{padding-top:18px;padding-bottom:18px}}
 @media(max-width:760px){html{scroll-padding-top:86px}.site-header{position:sticky;top:0;padding-top:12px;padding-bottom:12px}}
 @media print{.site-header{position:static}}
+/* ストーリーの長さにかかわらず、写真と文章の上端を保つ。 */
+.maker{align-items:start}
