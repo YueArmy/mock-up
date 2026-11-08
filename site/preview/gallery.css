@@ -110,3 +110,16 @@ html{scroll-padding-top:100px}
 .purchase-section .buying-types article>h3{font:400 23px/1.7 var(--serif);letter-spacing:.04em;margin:8px 0 0}
 .purchase-section .pending-slot h4{font:400 16px/1.7 var(--serif);margin:0}
 @media(max-width:760px){.purchase-section{padding-top:35px}.purchase-section>h2{font-size:27px;margin-bottom:26px}.purchase-section .buying-types article>h3{font-size:22px}}
+/* 購入と加工の案内を、それぞれ独立したまとまりにする。 */
+.purchase-section{padding-top:52px}
+.purchase-section>h2{margin-bottom:32px}
+.purchase-section .buying-types{gap:28px}
+.purchase-section .buying-types>article{background:#f0e9df;border-top:2px solid #b49d86;padding:28px 30px;min-width:0}
+.purchase-section .buying-types article>p{margin:18px 0}
+.purchase-section .pending-slot{background:transparent;border-left:0;border-top:1px solid #d1c2b1;padding:18px 0 0;margin-top:24px}
+@media(max-width:760px){
+ .purchase-section{padding-top:40px}
+ .purchase-section>h2{margin-bottom:26px}
+ .purchase-section .buying-types{gap:22px}
+ .purchase-section .buying-types>article{padding:24px 22px}
+}
