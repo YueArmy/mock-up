@@ -74,3 +74,5 @@
 .product-intro .english{margin:14px 0 24px}
 .product-intro .button{margin-top:18px}
 @media(max-width:760px){.product-intro .product-title{font-size:25px}.product-intro dl{margin-top:18px}}
+.product-features .features-heading{font:400 23px/1.7 var(--serif);letter-spacing:.04em;margin:0 0 24px}
+@media(max-width:760px){.product-features .features-heading{font-size:22px;margin-bottom:22px}}
