@@ -76,3 +76,8 @@
 @media(max-width:760px){.product-intro .product-title{font-size:25px}.product-intro dl{margin-top:18px}}
 .product-features .features-heading{font:400 23px/1.7 var(--serif);letter-spacing:.04em;margin:0 0 24px}
 @media(max-width:760px){.product-features .features-heading{font-size:22px;margin-bottom:22px}}
+/* ヘッダーとフッターを淡いブラウンで包む。 */
+.site-header,.site-footer{position:relative;isolation:isolate}
+.site-header{z-index:5}
+.site-header::before,.site-footer::before{content:"";position:absolute;inset:0;background:#eee5db;box-shadow:0 0 0 100vmax #eee5db;clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none}
+@media(max-width:760px){.site-header>nav{background:#eee5db}}
