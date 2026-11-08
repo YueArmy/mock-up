@@ -81,3 +81,17 @@
 .site-header{z-index:5}
 .site-header::before,.site-footer::before{content:"";position:absolute;inset:0;background:#eee5db;box-shadow:0 0 0 100vmax #eee5db;clip-path:inset(0 -100vmax);z-index:-1;pointer-events:none}
 @media(max-width:760px){.site-header>nav{background:#eee5db}}
+/* 商品の特徴と購入案内の階層 */
+.product-features .features-heading{font-size:clamp(27px,2.4vw,32px);line-height:1.5;margin:0 0 28px}
+.product-entry .feature-grid h4{font-size:20px;line-height:1.7}
+.product-entry .feature-number{font-size:16px;color:var(--muted);margin-bottom:12px}
+.product-end{border-top:1px solid var(--line);padding-top:24px;margin-top:8px}
+main > .end-link{background:#eee5db;border-top:1px solid var(--line);padding:36px 40px;margin-top:24px;margin-bottom:70px}
+main > .end-link h2{font-size:clamp(25px,2.5vw,32px)}
+@media(max-width:760px){
+ .product-features .features-heading{font-size:27px;margin-bottom:24px}
+ .product-entry .feature-grid h4{font-size:20px}
+ .product-end{padding-top:20px;margin-top:2px}
+ main > .end-link{padding:28px 24px;margin-top:16px;margin-bottom:50px}
+ main > .end-link h2{font-size:25px}
+}
