@@ -5,19 +5,26 @@
 - [ホームページを見る](https://yuearmy.github.io/mock-up/preview/)
 - [ご確認いただきたいこと](https://yuearmy.github.io/mock-up/preview/review.html)
 
-HP本体はトップ、About、黒帯ポシェット、バッグインバッグ、ストーマ用ショーツ、ご購入・お問い合わせ、カスハラ方針の全7ページ。確認事項ページを別に設けています。
+HP本体は次の全3ページです。確認事項ページは別枠として、本体のページ数に含めません。
+
+1. トップ・ブランド紹介 — 作り手の写真、ストーリー、布合わせの紹介
+2. 商品紹介 — 黒帯ポシェット、バッグインバッグ、ストーマ用ショーツの写真・特徴・仕様・英語説明
+3. ご購入・お問い合わせ — 購入案内、FAQ、問い合わせ確認、ショップ/SNS、末尾にカスハラ方針の全文
+
+トップから各商品の紹介位置へ直接移動できます。以前のAbout・商品・方針URLも、新しい掲載位置へ案内します。
 
 デザイン・構成・文章を確認するためのモックです。価格・仕様・在庫・受付条件・販売先/SNSのリンクとQR・問い合わせ窓口は確認後に反映します。問い合わせは入力確認・修正・文面コピーまでで、送信・保存・注文・決済は行いません。
 
 ## 構成
 
-- `site/preview/` — 現在の提出版。7ページと確認事項、共通CSS/JS、支給画像5点
+- `site/preview/` — 現在の提出版。3ページと確認事項、旧URLの案内、共通CSS/JS、支給画像5点
 - `site/index.html` — 提出版トップへ案内
 - `site/proposal.html` — 提出版の確認事項へ案内
 - `site/designs/index.html` — 提出版トップへ案内
 - `site/designs/design04/`、`atelier/`、`journal/` — 過去の3案を保存。現在の提出版からはリンクしません
 - `scripts/check-design-files.py` — site/全体の相対リンク・画像・アンカー検証
-- `plans/20261108-single-proposal-delivery.md` — 今回の実装・公開計画
+- `plans/20261108-three-page-proposal.md` — 3ページ統合の実装・公開計画
+- `plans/20261108-single-proposal-delivery.md` — 1案の初回提出版を公開した際の計画
 
 ## ローカル確認
 

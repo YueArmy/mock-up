@@ -9,3 +9,44 @@
 .site-footer .footer-policy-copy{font-family:var(--sans);font-size:9px;line-height:2;color:var(--muted);margin-top:20px}
 
 .review-bar .review-link{border-bottom:1px solid #aa9b89;padding:3px 0;white-space:nowrap}.review-bar .review-link:hover{color:var(--brown)}.delivery-list{padding-left:1.4em;margin:22px 0;font-size:13px;line-height:2.4}.delivery-list li+li{margin-top:8px}.delivery-pages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 35px;margin-top:25px}.delivery-pages a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}.delivery-pages a:hover{color:var(--brown)}@media(max-width:760px){.delivery-pages{grid-template-columns:1fr}.delivery-list{font-size:12px}.review-bar .review-link{font-size:9px}}
+
+/* Three-page proposal: shared product index and integrated brand/policy sections. */
+.maker-credit{font-size:11px!important;color:var(--muted)}
+#about,#story,#policy{scroll-margin-top:25px}
+.product-index{position:sticky;top:0;z-index:15;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.product-index>.wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:17px 0}
+.product-index a{font-size:12px;padding:5px 0;border-bottom:1px solid transparent}
+.product-index a:hover{color:var(--brown);border-bottom-color:var(--brown)}
+.product-entry{padding-top:40px;scroll-margin-top:0}
+.product-entry+.product-entry{border-top:1px solid var(--line);margin-top:20px}
+.product-entry .product-main-image{top:85px}
+.product-intro h2{font-size:clamp(28px,3vw,40px);line-height:1.85;letter-spacing:.025em;margin-bottom:25px}
+.product-entry .product-features .section-head h3,.product-entry .product-specs h3{font:400 clamp(27px,3vw,39px)/1.8 var(--serif);letter-spacing:.06em}
+.product-entry .feature-grid h4{font:400 20px/1.7 var(--serif);margin:0}
+.product-entry .english h4{font:400 22px/1.7 Georgia,serif;margin:12px 0 0}
+.product-end{display:flex;justify-content:space-between;align-items:center;gap:25px;padding-bottom:45px}
+.guide-index{display:flex;flex-wrap:wrap;gap:12px 30px;padding-bottom:30px}
+.guide-index a{font-size:11px;border-bottom:1px solid var(--line);padding:6px 0}
+.guide-index a:hover{color:var(--brown)}
+.policy-section{border-top:1px solid var(--line);padding:50px 0 65px}
+.policy-section>h2{font-size:clamp(26px,3.8vw,43px)}
+.policy-section>p:not(.eyebrow){font-size:12px;margin-top:20px}
+.policy-section .reading{margin-left:0;max-width:840px}
+@media(max-width:1050px){.product-intro h2{font-size:31px}}
+@media(max-width:760px){
+ .product-index>.wrap{gap:12px;padding:13px 0}
+ .product-index a{font-size:10px;white-space:nowrap}
+ .product-entry{padding-top:25px;scroll-margin-top:55px}
+ .product-entry .product-main-image{position:static}
+ .product-intro h2{font-size:32px}
+ .product-entry .product-features .section-head h3,.product-entry .product-specs h3{font-size:28px;letter-spacing:.035em}
+ .product-entry .feature-grid h4{font-size:23px}
+ .product-end{padding-bottom:35px;gap:20px}
+ .product-end .text-link{font-size:10px;gap:10px}
+ .guide-index{gap:10px 22px;padding-bottom:25px}
+ .guide-index a{font-size:10px}
+ .policy-section{padding:38px 0 45px}
+ .policy-section>h2{font-size:28px}
+}
+@media(max-width:360px){.product-intro h2{font-size:28px}.product-index>.wrap{gap:8px}.product-index a{font-size:9px}.product-end{align-items:flex-start;flex-direction:column;gap:10px}}
+@media print{.product-index{position:static}.product-entry .product-main-image{position:static}}
