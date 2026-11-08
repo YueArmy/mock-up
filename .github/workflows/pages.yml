@@ -26,6 +26,7 @@ jobs:
           node --check site/proposal.js
           node --check site/designs/shared.js
           node --check site/designs/proposal.js
+          node --check site/preview/gallery.js
           python3 scripts/check-design-files.py
       - name: Configure Pages
         uses: actions/configure-pages@v5

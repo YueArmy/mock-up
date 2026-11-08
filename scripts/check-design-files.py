@@ -10,7 +10,7 @@ class Page(HTMLParser):
   if a.get('id'): self.ids.add(a['id'])
   for key in ['href','src']:
    if a.get(key):self.links.append(a[key])
-pages=list((ROOT/'designs').rglob('*.html')); errors=[]
+pages=list(ROOT.rglob('*.html')); errors=[]
 for p in pages:
  for href in Page(p.read_text()).links:
   u=urlsplit(href)

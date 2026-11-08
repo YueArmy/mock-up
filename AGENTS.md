@@ -3,6 +3,8 @@
 - プロジェクトのパス: /Users/koneko/Developer/clients/mock-up
 - GitHub: https://github.com/YueArmy/mock-up
 - 公開URL: https://yuearmy.github.io/mock-up/
+- 現在の提出対象: site/preview/ の「布の小さなギャラリー」1案。HP本体7ページ＋確認事項ページ。
+- サイト直下・proposal.html・designs/index.htmlは現在の提出対象へ案内する。過去案は保存する。
 - 公開するファイルは site/ のみ。HTML/CSS/JavaScriptの静的サイト。
 - mainへのpushでGitHub Pagesへ自動デプロイする。
 - 作業計画は plans/ に残す。
