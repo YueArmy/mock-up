@@ -135,3 +135,8 @@ html{scroll-padding-top:100px}
 
 .site-footer .footer-nav{justify-self:auto;max-width:none;margin-top:24px;font-size:13px;line-height:1.6}
 @media(max-width:480px){.site-footer{grid-template-columns:1fr}.site-footer .footer-nav{margin-top:20px}}
+
+/* フッターの情報をグループごとに整理 */
+.site-footer{align-items:start;column-gap:clamp(36px,7vw,100px);row-gap:32px}
+.site-footer>div:first-child{min-width:0}.site-footer .footer-nav{gap:10px;margin-top:28px;font-size:13px}.site-footer .footer-nav a{line-height:1.7}.site-footer .footer-contact{font-size:14px;line-height:1.9;max-width:34em}.site-footer .footer-contact strong{font-size:15px}.site-footer .footer-policy-copy{font-size:12px;line-height:1.9}.site-footer p{font-size:12px}.site-footer>div>span{font-size:11px}
+@media(max-width:700px){.site-footer{grid-template-columns:minmax(0,1fr);row-gap:28px}.site-footer .footer-contact{border-top:1px solid var(--line);padding-top:24px;max-width:none}.site-footer .footer-nav{margin-top:24px}.site-footer .footer-bottom{margin-top:0}}
