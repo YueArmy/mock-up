@@ -129,6 +129,6 @@ html{scroll-padding-top:100px}
 @media(prefers-reduced-motion:reduce){.channel-grid>div{transition:none}}
 
 /* 商品情報・事業概要の可読性 */
-:root{--ink:#302a26;--muted:#554c45}body{font-size:16px}.eyebrow{font-size:11px;color:#554c45}.business-overview{padding-block:70px;border-top:1px solid var(--line)}.business-overview>p:not(.eyebrow){margin:20px 0 28px}.business-overview details{border-top:1px solid var(--line);padding:18px 0}.business-overview details:last-child{border-bottom:1px solid var(--line)}.business-overview summary{display:flex;justify-content:space-between;cursor:pointer;font-size:15px}.overview-copy{max-width:850px;padding:20px 0;line-height:2}.overview-copy h3{margin:20px 0 8px}.overview-copy ul{padding-left:1.4em}.footer-contact{font-style:normal;line-height:1.9;font-size:14px}.footer-contact a{text-decoration:underline;text-underline-offset:3px}@media(max-width:700px){.business-overview{padding-block:45px}.footer-contact{font-size:13px}}
+:root{--ink:#302a26;--muted:#554c45}body{font-size:16px}.eyebrow{font-size:11px;color:#554c45}.footer-contact{font-style:normal;line-height:1.9;font-size:14px}.footer-contact a{text-decoration:underline;text-underline-offset:3px}@media(max-width:700px){.footer-contact{font-size:13px}}
 
 .channel-grid>a{display:block;border-top:1px solid var(--line);padding-top:16px}.channel-grid>a:hover,.channel-grid>a:focus-visible{background:var(--soft)}.channel-grid>a span,.channel-grid>a small{display:block}
