@@ -38,3 +38,18 @@ if(catalogChoices.length){
  window.addEventListener('hashchange',showProduct);
  showProduct();
 }
+
+// トップの写真枠：URLに ?hero=movie があるときだけ動画に切り替える。読めない・再生できないときは写真のまま。
+(function(){
+ const fig=document.querySelector('.hero-photo[data-movie]');
+ if(!fig||new URLSearchParams(location.search).get('hero')!=='movie')return;
+ const img=fig.querySelector('img'),cap=fig.querySelector('figcaption span');
+ const v=document.createElement('video');
+ v.muted=true;v.defaultMuted=true;v.loop=true;v.autoplay=true;v.playsInline=true;
+ ['muted','loop','autoplay','playsinline'].forEach(a=>v.setAttribute(a,''));
+ v.preload='auto';v.poster=fig.dataset.moviePoster;v.setAttribute('aria-label',fig.dataset.movieLabel||'');
+ const back=()=>{v.remove();img.hidden=false;};
+ v.addEventListener('error',back);
+ v.addEventListener('loadeddata',()=>{img.hidden=true;if(cap&&fig.dataset.movieCaption)cap.textContent=fig.dataset.movieCaption;const p=v.play();if(p&&p.catch)p.catch(()=>{});});
+ v.src=fig.dataset.movie;fig.insertBefore(v,img);
+})();
