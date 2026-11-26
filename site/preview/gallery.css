@@ -140,9 +140,3 @@ html{scroll-padding-top:100px}
 .site-footer{align-items:start;column-gap:clamp(36px,7vw,100px);row-gap:32px}
 .site-footer>div:first-child{min-width:0}.site-footer .footer-nav{gap:10px;margin-top:28px;font-size:13px}.site-footer .footer-nav a{line-height:1.7}.site-footer .footer-contact{font-size:14px;line-height:1.9;max-width:34em}.site-footer .footer-contact strong{font-size:15px}.site-footer .footer-policy-copy{font-size:12px;line-height:1.9}.site-footer p{font-size:12px}.site-footer>div>span{font-size:11px}
 @media(max-width:700px){.site-footer{grid-template-columns:minmax(0,1fr);row-gap:28px}.site-footer .footer-contact{border-top:1px solid var(--line);padding-top:24px;max-width:none}.site-footer .footer-nav{margin-top:24px}.site-footer .footer-bottom{margin-top:0}}
-
-/* 4ページ構成：作り手紹介と文字の読みやすさ */
-.home-about{padding-block:75px;border-top:1px solid var(--line)}.home-about p:not(.eyebrow){margin:16px 0 24px}.about-maker{grid-template-columns:minmax(140px,180px) minmax(0,1fr);gap:clamp(28px,6vw,90px);padding-block:35px 70px}.about-maker figure img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center top}.about-maker figure{max-width:180px}.about-maker>div{max-width:760px}.about-maker>div p{margin-top:18px}.business-overview{padding-block:65px;border-top:1px solid var(--line)}.business-overview>p:not(.eyebrow){margin:20px 0}.overview-copy{max-width:850px;line-height:2}.overview-copy h3{margin:28px 0 8px}.overview-copy ul{padding-left:1.4em}.hero-photo img{object-position:center}.site-header nav,.footer-nav,.product-intro p,.guide-index,.faq summary,.inquiry label{font-size:max(15px,1em)}@media(max-width:700px){.home-about,.business-overview{padding-block:45px}.about-maker{grid-template-columns:1fr;gap:28px;padding-block:20px 45px}.about-maker figure{width:min(150px,48vw)}}
-
-/* 説明文は約11ポイントを目安にし、見出しとの階層は保つ */
-body{font-size:15px}main p:not(.eyebrow),main li,main dt,main dd,main label,main summary{font-size:15px}
