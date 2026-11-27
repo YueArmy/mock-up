@@ -146,3 +146,6 @@ html{scroll-padding-top:100px}
 @media(max-width:1050px){.hero-photo>video{height:400px}}
 @media(max-width:760px){.hero-photo>video{height:auto;aspect-ratio:.92}}
 @media print{.hero-photo>video{display:none}}
+
+/* チラシに合わせたロゴ書体 */
+@font-face{font-family:"Bodoni Moda Logo";src:url("assets/fonts/bodoni-moda-logo-italic.woff2") format("woff2");font-style:italic;font-weight:400;font-display:swap}.brand{font-family:"Bodoni Moda Logo",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.025em}.brand span{font-style:normal}
