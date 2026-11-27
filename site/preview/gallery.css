@@ -149,3 +149,9 @@ html{scroll-padding-top:100px}
 
 /* チラシに合わせたロゴ書体 */
 @font-face{font-family:"Bodoni Moda Logo";src:url("assets/fonts/bodoni-moda-logo-italic.woff2") format("woff2");font-style:italic;font-weight:400;font-display:swap}.brand{font-family:"Bodoni Moda Logo",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.025em}.brand span{font-style:normal}
+
+/* 事業紹介と11.5ptを目安にした本文 */
+.hero-about-link{display:flex;width:max-content;margin:18px 0 0;font-size:11.5pt}.hero-small{display:block}.about-maker{grid-template-columns:minmax(140px,150px) minmax(0,1fr);gap:clamp(28px,6vw,90px);padding-block:35px 70px;align-items:start}.about-maker figure{width:150px;max-width:100%}.about-maker figure img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:center top}.about-maker>div{max-width:760px}.about-maker>div p{margin-top:18px}.business-overview{margin-top:52px;padding-top:36px;border-top:1px solid var(--line)}.overview-copy{max-width:850px;line-height:2}.overview-copy h3{margin:28px 0 8px}.overview-copy ul{padding-left:1.4em}.site-header nav a,main p:not(.eyebrow),main li,main dt,main dd,main label,main summary,main input,main textarea,main select,main .button,main .text-link,.site-footer nav a,.site-footer address{font-size:11.5pt}@media(max-width:700px){.about-maker{grid-template-columns:1fr;gap:28px;padding-block:20px 45px}.business-overview{margin-top:40px}.hero-about-link{margin-top:16px}}
+/* 既存の小さな本文指定より、指定された本文サイズを優先する。 */
+main p:not(.eyebrow),main li,main dt,main dd,main label,main summary,main input,main textarea,main select,main .button,main .text-link,.site-header nav a,.site-footer nav a,.site-footer address{font-size:11.5pt!important}
+@media(max-width:700px){main input,main textarea,main select{font-size:16px!important}}
