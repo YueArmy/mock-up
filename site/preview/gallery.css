@@ -158,3 +158,6 @@ main p:not(.eyebrow),main li,main dt,main dd,main label,main summary,main input,
 
 /* BASEの購入先とQRコード */
 .shop-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(28px,5vw,70px);align-items:center;max-width:840px;margin-top:30px;padding:clamp(24px,4vw,42px);background:#eee7dd;border-top:1px solid var(--line)}.shop-card-label{font-size:11px;letter-spacing:.15em;color:var(--muted)}.shop-card-copy h3{font:34px/1.3 Georgia,serif;margin:14px 0}.shop-card-copy p{margin:0 0 20px;line-height:1.9}.shop-card-qr{margin:0;text-align:center}.shop-card-qr img{display:block;width:144px;height:144px;max-width:100%;background:#fff}.shop-card-qr figcaption{font-size:11px;color:var(--muted);margin-top:9px}@media(max-width:600px){.shop-card{grid-template-columns:1fr;gap:25px}.shop-card-qr{text-align:left}.shop-card-qr img{width:144px;height:144px}}
+
+/* 仮公開中のお問い合わせ先 */
+.inquiry-contact{align-self:center;padding:clamp(24px,4vw,40px);background:#eee7dd}.inquiry-contact p{margin:0 0 20px;line-height:1.9}.inquiry-contact .inquiry-mail{margin:14px 0 0;overflow-wrap:anywhere;color:var(--muted)}
