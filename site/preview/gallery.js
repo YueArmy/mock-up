@@ -5,8 +5,13 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('resize',()=>{if(innerWidth>760)closeMenu();});
-const inquiryLink=document.querySelector('#google-form-link');
-if(inquiryLink){
+const inquiryLink=document.querySelector('#google-form-link'),inquiryFrame=document.querySelector('#google-form-frame');
+if(inquiryLink && inquiryFrame){
+ let frameLoaded=false;
+ inquiryFrame.addEventListener('load',()=>{
+  if(frameLoaded && document.activeElement===inquiryFrame)inquiryFrame.scrollIntoView({block:'start'});
+  frameLoaded=true;
+ });
  const productNames={general:'商品全般',obi:'高級黒帯ポシェット3点セット',bag:'バッグインバッグ',shorts:'人工肛門ストーマ用ショーツ'};
  const chosen=new URLSearchParams(location.search).get('product');
  if(Object.prototype.hasOwnProperty.call(productNames,chosen)){
@@ -14,6 +19,8 @@ if(inquiryLink){
   url.searchParams.set('usp','pp_url');
   url.searchParams.set('entry.1781206770',productNames[chosen]);
   inquiryLink.href=url.toString();
+  url.searchParams.set('embedded','true');
+  inquiryFrame.src=url.toString();
  }
 }
 
