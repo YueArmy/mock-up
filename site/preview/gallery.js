@@ -5,22 +5,16 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
 window.addEventListener('resize',()=>{if(innerWidth>760)closeMenu();});
-const form=document.querySelector('#inquiry-form');
-if(form){
- const product=document.querySelector('#product'),topic=document.querySelector('#topic'),message=document.querySelector('#message'),name=document.querySelector('#contact-name'),email=document.querySelector('#contact-email'),result=document.querySelector('#draft-result'),draft=document.querySelector('#draft-text'),copyStatus=document.querySelector('#copy-status');
- form.querySelectorAll('input,select,textarea,button[type=submit]').forEach(control=>{control.disabled=false;});
+const inquiryLink=document.querySelector('#google-form-link');
+if(inquiryLink){
+ const productNames={general:'商品全般',obi:'高級黒帯ポシェット3点セット',bag:'バッグインバッグ',shorts:'人工肛門ストーマ用ショーツ'};
  const chosen=new URLSearchParams(location.search).get('product');
- if([...product.options].some(option=>option.value===chosen))product.value=chosen;
- message.addEventListener('input',()=>message.setCustomValidity(''));
- form.addEventListener('submit',e=>{
-  e.preventDefault();const body=message.value.trim();
-  if(!body){message.setCustomValidity('お問い合わせ内容を入力してください。');message.reportValidity();return;}
-  const item=product.selectedOptions[0].textContent;
-  draft.textContent=`お名前：${name.value.trim()}\nメールアドレス：${email.value.trim()}\nお問い合わせの商品：${item}\nお問い合わせ項目：${topic.value}\n\n${body}`;
-  form.hidden=true;result.hidden=false;copyStatus.textContent='';result.focus();
- });
- document.querySelector('#edit-draft').addEventListener('click',()=>{result.hidden=true;form.hidden=false;message.focus();});
- document.querySelector('#copy-draft').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(draft.textContent);copyStatus.textContent='お問い合わせ文をコピーしました。送信はしていません。';}catch{copyStatus.textContent='コピーできませんでした。上の文章を選択してコピーしてください。';}});
+ if(Object.prototype.hasOwnProperty.call(productNames,chosen)){
+  const url=new URL(inquiryLink.href);
+  url.searchParams.set('usp','pp_url');
+  url.searchParams.set('entry.1781206770',productNames[chosen]);
+  inquiryLink.href=url.toString();
+ }
 }
 
 // Keep all products readable without JavaScript; enhance with hash-addressable selection.
